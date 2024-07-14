@@ -1,0 +1,6 @@
+npm i express ejs express-ejs-layouts
+npm i --save-dev nodemon
+inside package.json add 
+script: 
+start : node server.js
+devStart: nodemon server.js
