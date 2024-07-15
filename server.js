@@ -20,4 +20,4 @@ db.once('open', ()=>console.log('connected to mongoose'))
 
 
 app.use("/", indexRouter);
-app.listen(3000);
+app.listen(  3000);
