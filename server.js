@@ -5,7 +5,8 @@ app.set("view engine", 'ejs');
 app.set('views', __dirname+ '/views'); 
 
 // setup routes and other paths
-const indexRouter=require('./routes/index')
+const indexRouter=require('./routes/index');
+const autherRouter=require('./routes/authors');
 app.set("layout",'layouts/layout');
 app.use(expressLayouts);
 app.use(express.static('public'));
@@ -20,4 +21,5 @@ db.once('open', ()=>console.log('connected to mongoose'))
 
 
 app.use("/", indexRouter);
+app.use("/authors", autherRouter);
 app.listen(  3000);
